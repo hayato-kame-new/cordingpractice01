@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Practice01Controller;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/practice01/', [Practice01Controller::class, 'index'])->name('practice01.index');
